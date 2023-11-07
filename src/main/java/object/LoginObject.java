@@ -2,7 +2,6 @@ package object;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class LoginObject {
 
@@ -12,24 +11,24 @@ public class LoginObject {
         this.driver = driver;
     }
 
-    public WebElement getButtonSignIn() {
-        return driver.findElement(By.xpath("(//*[contains(text(),'Sign In')])[1]"));
+    public By getButtonSignIn() {
+        return By.xpath("(//*[contains(text(),'Sign In')])[1]");
     }
 
-    public WebElement getHeaderCustomerLogin() {
-        return driver.findElement(By.xpath("//span[contains(text(),'Customer Login')]"));
+    public By getHeaderCustomerLogin() {
+        return By.xpath("//span[contains(text(),'Customer Login')]");
     }
 
-    public WebElement getInputEmail() {
-        return driver.findElement(By.id("email"));
+    public By getInputEmail() {
+        return By.id("email");
     }
 
-    public WebElement getInputPassword() {
-        return driver.findElement(By.id("pass"));
+    public By getInputPassword() {
+        return By.id("pass");
     }
 
-    public WebElement getButtonSignInValidation() {
-        return driver.findElement(By.xpath("(//button[@name='send'])[1]"));
+    public By getButtonSignInValidation() {
+        return By.xpath("(//button[@name='send'])[1]");
     }
 
 }
