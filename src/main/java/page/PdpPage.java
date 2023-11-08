@@ -2,9 +2,8 @@ package page;
 
 import object.HomeObject;
 import object.PdpObject;
-import object.SearchObject;
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+
 import static org.junit.Assert.assertTrue;
 
 public class PdpPage extends BasePage {
