@@ -1,6 +1,11 @@
 # Description
 This repo contains one test suite, Checkout Journey, which run the test case flow from login until do transaction in the [https://magento.softwaretestingboard.com/](https://magento.softwaretestingboard.com/) 
 
+# Environment
+1. Webdriver: Chromedriver
+2. Testing framework: TestNG
+3. Reporting: Extent Report
+
 # Pre-requisites
 1. Clone this repo `git@github.com:shintana/Develab_Shintana.git`
 2. Make sure Chromedriver already downloaded. Then, you can fill in the driver path in `src > test > java > CheckoutJourney.java`
@@ -27,3 +32,8 @@ If the test case is failed, the screenshot also provided in Screenshots folder
 
 <img width="348" alt="Screenshot 2023-11-09 at 13 42 37" src="https://github.com/shintana/Develab_Shintana/blob/main/assets/Screenshot%202023-11-09%20at%2013.42.37.png">
 
+# Sample Report
+1. Success report
+ <img width="506" alt="Screenshot 2023-11-09 at 13 54 50" src="https://github.com/shintana/Develab_Shintana/blob/main/assets/Screenshot%202023-11-09%20at%2013.41.47.png">
+2. Failed report
+ <img width="506" alt="Screenshot 2023-11-09 at 13 54 50" src="https://github.com/shintana/Develab_Shintana/blob/main/assets/Screenshot%202023-11-09%20at%2013.42.05.png">
