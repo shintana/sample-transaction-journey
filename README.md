@@ -21,10 +21,9 @@ This repo contains one test suite, Checkout Journey, which run the test case flo
 3. Wait until the test case is finished
 
 # Generate Report
-When the test is finished, you can check the report in report `folder > ExtentReport.html`
+When the test is finished, you can check the report in `report folder > ExtentReport.html`
 
 If the test case is failed, the screenshot also provided in Screenshots folder
 
 <img width="348" alt="Screenshot 2023-11-09 at 13 42 37" src="https://github.com/shintana/Develab_Shintana/blob/main/assets/Screenshot%202023-11-09%20at%2013.42.37.png">
-
 
