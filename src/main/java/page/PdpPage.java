@@ -17,11 +17,11 @@ public class PdpPage extends BasePage {
         pdpObject = new PdpObject(driver);
     }
 
-    public void addToCart() {
+    public void addToCart() throws InterruptedException {
 
-        waitForElementVisible(this.pdpObject.getTextAddYourReview());
-        click(this.pdpObject.getColorGreyProductJacket());
+        waitForElementVisible(this.pdpObject.getTextReview() );
         click(this.pdpObject.getSizeMProductJacket());
+        click(this.pdpObject.getColorOrangeProductJacket());
         click(this.pdpObject.getButtonAddToCart());
 
         waitForElementVisible(this.pdpObject.getSuccessMessage());

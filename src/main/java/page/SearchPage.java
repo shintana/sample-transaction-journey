@@ -1,13 +1,9 @@
 package page;
 
 import object.HomeObject;
-import object.PdpObject;
 import object.SearchObject;
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-
-import static org.junit.Assert.assertTrue;
 
 public class SearchPage extends BasePage{
 
@@ -20,11 +16,11 @@ public class SearchPage extends BasePage{
         searchObject = new SearchObject(driver);
     }
 
-    public void searchProduct(String product) {
+    public void searchProduct(String product) throws InterruptedException {
 
         click(this.homeObject.getInputSearch());
         inputText(this.homeObject.getInputSearch(), product);
-        inputText(this.homeObject.getInputSearch(), String.valueOf(Keys.RETURN));
+        inputText(this.homeObject.getInputSearch(), String.valueOf(Keys.ENTER));
 
         waitForElementVisible(this.searchObject.getFirstProduct());
         click(this.searchObject.getFirstProduct());

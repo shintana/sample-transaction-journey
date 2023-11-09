@@ -28,7 +28,13 @@ public class CheckoutObject {
     public By getInputPhoneNumber() {
         return By.name("telephone");
     }
+    public By getButtonFlatRate() {
+        return By.xpath("//input[@value='flatrate_flatrate' and @checked='true']");
+    }
     public By getButtonNext() {
-        return By.xpath("//button[contains(@class,'continue')]");
+        return By.xpath("//span[normalize-space()='Next']");
+    }
+    public By getButtonAddAddress() {
+        return By.xpath("//span[contains(text(), 'New Address')]");
     }
 }

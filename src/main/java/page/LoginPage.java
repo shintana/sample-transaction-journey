@@ -12,9 +12,9 @@ public class LoginPage extends BasePage{
         loginObject = new LoginObject(driver);
     }
 
-    public void goToLoginPage() {
+    public void goToLoginPage() throws InterruptedException {
         click(this.loginObject.getButtonSignIn());
-        inputText(this.loginObject.getInputEmail(), "shinta-develab@gmail.com");
+        inputText(this.loginObject.getInputEmail(), "shinta.nuraisya@gmail.com");
         inputText(this.loginObject.getInputPassword(), "@Test12345");
         click(this.loginObject.getButtonSignInValidation());
     }

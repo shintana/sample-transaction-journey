@@ -1,24 +1,39 @@
 package page;
 
 import object.CheckoutObject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class CheckoutPage extends BasePage {
 
-    private CheckoutObject shippingObject;
+    private CheckoutObject checkoutObject;
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
-        shippingObject = new CheckoutObject(driver);
+        checkoutObject = new CheckoutObject(driver);
     }
 
-    public void fillInForm() {
-        inputText(this.shippingObject.getInputStreetAddress(), "Setiabudi");
+    public void goToPaymentPage() throws InterruptedException {
+        boolean buttonNewAddressExist = driver.findElements(By.xpath("//span[contains(text(), 'New Address')]") ).size() != 0;
+        if (buttonNewAddressExist) {
+            WebElement elem = driver.findElement(By.xpath("//button[contains(@class,'continue')]"));
+            ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", elem);
 
-        inputText(this.shippingObject.getInputCity(), "Jakarta");
-        inputText(this.shippingObject.getInputCountry(), "Indonesia");
-        inputText(this.shippingObject.getInputZip(), "12940");
-        inputText(this.shippingObject.getInputPhoneNumber(), "085123123123");
-        click(this.shippingObject.getButtonNext());
+            waitForElementVisible(this.checkoutObject.getButtonNext());
+            click(this.checkoutObject.getButtonNext());
+
+        } else {
+            inputText(this.checkoutObject.getInputStreetAddress(), "Setiabudi");
+            inputText(this.checkoutObject.getInputCity(), "Jakarta");
+            inputText(this.checkoutObject.getInputCountry(), "Indonesia");
+            inputText(this.checkoutObject.getInputZip(), "12940");
+            inputText(this.checkoutObject.getInputPhoneNumber(), "085123123123");
+
+            waitForElementVisible(this.checkoutObject.getButtonFlatRate());
+            waitForElementVisible(this.checkoutObject.getButtonNext());
+            click(this.checkoutObject.getButtonNext());
+        }
     }
 }

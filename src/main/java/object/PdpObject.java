@@ -12,14 +12,14 @@ public class PdpObject {
         this.driver = driver;
     }
 
-    public By getTextAddYourReview() {
-        return By.xpath("//*[contains(text(),'Add Your Review')]");
+    public By getTextReview() {
+        return By.xpath("//*[contains(text(),'Add Your Review') or contains(text(),'Be the first')]");
     }
     public By getSizeMProductJacket() {
         return By.id("option-label-size-143-item-168");
     }
-    public By getColorGreyProductJacket() {
-        return By.id("option-label-color-93-item-52");
+    public By getColorOrangeProductJacket() {
+        return By.id("option-label-color-93-item-56");
     }
     public By getButtonAddToCart() {
         return By.id("product-addtocart-button");

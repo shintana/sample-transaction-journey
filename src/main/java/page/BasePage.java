@@ -13,22 +13,23 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 20);
+        wait = new WebDriverWait(driver, 10);
     }
 
-    public WebElement waitForElementVisible(By by) {
+    public WebElement waitForElementVisible(By by) throws InterruptedException {
+        Thread.sleep(3000);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
-    public void click(By by) {
+    public void click(By by) throws InterruptedException {
         waitForElementVisible(by).click();
     }
 
-    public void verifyElementVisible(By by) {
+    public void verifyElementVisible(By by) throws InterruptedException {
         waitForElementVisible(by).isDisplayed();
     }
 
-    public void inputText(By by, String text) {
+    public void inputText(By by, String text) throws InterruptedException {
         waitForElementVisible(by).sendKeys(text);
     }
 }
