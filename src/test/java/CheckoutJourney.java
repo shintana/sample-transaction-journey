@@ -23,7 +23,7 @@ public class CheckoutJourney {
 
     public String url = "https://magento.softwaretestingboard.com/";
     public WebDriver driver;
-    String driverPath = "/Users/shinta.arizky/Downloads/chromedriver";
+    String driverPath = "";
     ExtentTest logger;
     ExtentSparkReporter spark;
     ExtentReports extent;
@@ -79,7 +79,7 @@ public class CheckoutJourney {
             pdp.addToCart();
             logger.pass("Add " + products[i] + " to cart");
         }
-        
+
         cart.goToCheckoutPage();
         logger.pass("Go to checkout page");
 
