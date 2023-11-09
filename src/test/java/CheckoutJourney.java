@@ -79,25 +79,7 @@ public class CheckoutJourney {
             pdp.addToCart();
             logger.pass("Add " + products[i] + " to cart");
         }
-
-//        search.searchProduct("jacket");
-//        logger.pass("Search product jacket");
-//
-//        pdp.addToCart();
-//        logger.pass("Add jacket to cart");
-//
-//        search.searchProduct("hoodie");
-//        logger.pass("Search product hoodie");
-//
-//        pdp.addToCart();
-//        logger.pass("Add jacket to cart");
-//
-//        search.searchProduct("sweatshirt");
-//        logger.pass("Search product sweatshirt");
-//
-//        pdp.addToCart();
-//        logger.pass("Add jacket to cart");
-
+        
         cart.goToCheckoutPage();
         logger.pass("Go to checkout page");
 
