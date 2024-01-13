@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>Develab_Shintana</artifactId>
+  <artifactId>shintana</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Develab_Shintana</name>
+  <name>shintana</name>
   <url>http://maven.apache.org</url>
 
   <properties>
