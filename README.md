@@ -7,7 +7,7 @@ This repo contains one test suite, Checkout Journey, which run the test case flo
 3. Reporting: Extent Report
 
 # Pre-requisites
-1. Clone this repo `git@github.com:shintana/Develab_Shintana.git`
+1. Clone this repo `https://github.com/shintana/sample-transaction-journey.git`
 2. Make sure Chromedriver already downloaded. Then, you can fill in the driver path in `src > test > java > CheckoutJourney.java`
 <img width="557" alt="Screenshot 2023-11-09 at 13 53 04" src="https://github.com/shintana/Develab_Shintana/blob/main/assets/Screenshot%202023-11-09%20at%2013.53.04.png">
 
@@ -29,8 +29,6 @@ This repo contains one test suite, Checkout Journey, which run the test case flo
 When the test is finished, you can check the report in `report folder > ExtentReport.html`
 
 If the test case is failed, the screenshot also provided in Screenshots folder
-
-<img width="348" alt="Screenshot 2023-11-09 at 13 42 37" src="https://github.com/shintana/Develab_Shintana/blob/main/assets/Screenshot%202023-11-09%20at%2013.42.37.png">
 
 # Sample Report
 1. Success report
